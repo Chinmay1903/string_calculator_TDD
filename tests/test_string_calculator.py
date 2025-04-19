@@ -33,6 +33,14 @@ class TestStringCalculator(unittest.TestCase):
     
     def test_delimiter_of_any_length(self):
         self.assertEqual(add("//[***]\n1***2***3"), 6)
+    
+    def test_multiple_single_char_delimiters(self):
+        self.assertEqual(add("//[*][%]\n1*2%3"), 6)
+    
+    def test_multiple_long_delimiters(self):
+        self.assertEqual(add("//[***][%%]\n1***2%%3"), 6)
+
+
 
 
 if __name__ == "__main__":
