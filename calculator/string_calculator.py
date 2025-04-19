@@ -20,7 +20,8 @@ def add(numbers: str) -> int:
             n = int(num)
             if n < 0:
                 negative_numbers.append(n)
-            int_numbers.append(n)
+            elif n <= 1000: 
+                int_numbers.append(n)
 
     if negative_numbers:
         raise ValueError(f"negative numbers not allowed {', '.join(map(str, negative_numbers))}")
