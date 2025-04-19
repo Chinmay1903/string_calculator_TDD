@@ -1,5 +1,8 @@
 import unittest
 from calculator.string_calculator import add
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 class TestStringCalculator(unittest.TestCase):
 
