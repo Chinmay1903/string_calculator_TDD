@@ -12,5 +12,16 @@ class TestStringCalculator(unittest.TestCase):
     def test_two_numbers(self):
         self.assertEqual(add("1,2"), 3)
 
+    def test_multiple_numbers(self):
+        self.assertEqual(add("1,2,3,4"), 10)
+
+    def test_newlines_as_delimiters(self):
+        self.assertEqual(add("1\n2,3"), 6)
+
+    def test_custom_char_delimiter(self):
+        self.assertEqual(add("//;\n1;2"), 3)
+
+
+
 if __name__ == "__main__":
     unittest.main()
