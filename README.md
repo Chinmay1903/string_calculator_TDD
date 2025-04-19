@@ -1,4 +1,4 @@
-# string_calculator_TDD# 🧮 String Calculator TDD Kata (Python)
+# 🧮 String Calculator TDD Kata (Python)
 
 A simple calculator that adds numbers provided in a specially formatted string.  
 This project is built using **Test-Driven Development (TDD)** and `unittest`.
