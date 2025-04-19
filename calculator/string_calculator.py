@@ -8,8 +8,14 @@ def add(numbers: str) -> int:
 
     if numbers.startswith("//"):
         parts = numbers.split("\n", 1)
-        delimiter = re.escape(parts[0][2:]) 
+        delimiter_part = parts[0][2:]
         numbers = parts[1]
+        
+        if delimiter_part.startswith("[") and delimiter_part.endswith("]"):
+            delimiters = re.findall(r"\[(.*?)\]", delimiter_part)
+            delimiter = "|".join(map(re.escape, delimiters))
+        else:
+            delimiter = re.escape(delimiter_part)
     
     number_list = re.split(delimiter, numbers)
     int_numbers = []
